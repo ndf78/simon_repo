@@ -7,7 +7,8 @@ Library                         CSVLibrary
 &{Results_Tab} =                STRING = ${site}    STRING = ${impact}
 ${site} =    www.lemonde.fr
 ${impact}
-${chemin} =                     C:\\Users\\AY025171\\Desktop\\Results.csv
+# ${chemin} =                     C:\\Users\\AY025171\\Desktop\\Results.csv    
+${chemin} =                     ${EXECDIR}\\Results.csv
 
 *** Keywords ***
 
