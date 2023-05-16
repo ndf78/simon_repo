@@ -13,7 +13,8 @@ ${site}
 ${impact}
 &{Results_Tab} =                STRING = ${site}    STRING = ${impact}
 @{liste_site}
-${chemin} =                     C:\\Users\\AY025171\\Desktop\\Results.csv
+# ${chemin} =                     C:\\Users\\AY025171\\Desktop\\Results.csv
+${chemin} =                     ${EXECDIR}\\Results.csv
 
 *** Test Cases ***
 Test 1
