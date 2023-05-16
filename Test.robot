@@ -3,6 +3,7 @@
 Library                         SeleniumLibrary
 Library                         Collections
 Library                         CSVLibrary
+Library                         ScreenCapLibrary
 
 *** Variables ***
 ${BROWSER} =                    chrome
@@ -20,7 +21,7 @@ ${chemin} =                     ${EXECDIR}\\Results.csv
 Test 1
     [Documentation]    Ce test simule la consultation d'une offre sur le site d'Ausy
     [Tags]  Usual
-
+    ScreenCapLibrary.Start Video Recording    alias=none    name=${TEST NAME}    fps=None    size_percentage=1    embed=True    embed_width=100px    monitor=2
     # Debut du test
     Connexion au site
     Récupérer l'adresse du site
@@ -31,6 +32,8 @@ Test 1
     Consulter les offres
     Récupérer l'adresse du site
     Récupérer l'impact des pages consultées
+    Sleep    time_=5
+    ScreenCapLibrary.Stop Video Recording
 
 *** Keywords ***
 
